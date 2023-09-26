@@ -1097,3 +1097,18 @@ remote: Compressing objects:   3% (1/31)[Kremote: Compressing objects:   6% (2
  DEBUG [0313919d] Finished in 0.810 seconds with exit status 1 (failed).
   INFO [3155808b] Running ~/.rvm/bin/rvm default do bundle install --jobs 4 --quiet on 15.229.87.6
  DEBUG [3155808b] Command: cd /home/deploy/apps/blog/releases/20230926042625 && ~/.rvm/bin/rvm default do bundle install --jobs 4 --quiet
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-09-26 15:07:06 +0000 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [f3b5015d] Running [ -d ~/.rvm ] on 15.229.87.6
+ DEBUG [f3b5015d] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-09-26 15:11:00 +0000 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [eb1f617e] Running [ -d ~/.rvm ] on 15.229.87.6
+ DEBUG [eb1f617e] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-09-26 15:14:17 +0000 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [97d6f23a] Running [ -d ~/.rvm ] on 18.231.155.247
+ DEBUG [97d6f23a] Command: [ -d ~/.rvm ]
