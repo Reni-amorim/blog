@@ -33,7 +33,7 @@ namespace :bundler do
         Install the current Bundler environment. By default, gems will be
         installed to the shared/bundle path. Gems in the development and
         test group will not be installed. The install command is executed
-        with the --quiet and --jobs=4 flags.
+        with the --quiet and --jobs=1 flags.
 
         By default, bundler will not be run on servers with no_release: true.
 
