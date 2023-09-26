@@ -1,5 +1,5 @@
 # Change these
-server "15.228.14.117", :roles => [:app, :web, :db], :primary => true
+server "15.229.42.148", :roles => [:app, :web, :db], :primary => true
 
 set :repo_url,        'git@github.com:Reni-amorim/blog.git'
 set :application,     'blog'
