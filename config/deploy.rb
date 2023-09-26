@@ -2,7 +2,7 @@
 server "15.229.87.6", :roles => [:app, :web, :db], :primary => true
 
 set :repo_url,        'git@github.com:Reni-amorim/blog.git'
-set :application,     blog'
+set :application,     'blog'
 set :user,            'deploy'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
