@@ -50,4 +50,6 @@ end
 
 gem 'puma'
 
+#Shellwords para bundler
+gem "shellwords", "~> 0.1.0"
 
