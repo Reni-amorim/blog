@@ -120,7 +120,7 @@ namespace :load do
     set :bundle_path, -> { shared_path.join('bundle') }
     set :bundle_without, %w{development test}.join(':')
     set :bundle_flags, '--quiet'
-    set :bundle_jobs, 4
+    set :bundle_jobs, 1
     set :bundle_env_variables, {}
     set :bundle_clean_options, ""
     set :bundle_check_before_install, true
