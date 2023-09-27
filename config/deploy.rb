@@ -12,6 +12,7 @@ set :puma_workers,    0
 # Don't change these unless you know what you're doing
 ##### SET RVM BUNDLER 
 set :rvm_map_bins, %w{gem rake ruby rails bundle}
+set :rvm1_ruby_version, "ruby-3.1.4"
 set :pty,             true
 set :use_sudo,        false
 set :stage,           :production
