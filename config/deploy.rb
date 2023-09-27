@@ -40,13 +40,7 @@ set :puma_init_active_record, true  # Change to false when not using ActiveRecor
 # set :linked_files, %w{config/database.yml}
 # set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
-namespace :deploy do
-  after :deploy, :build_app do
-    on roles(:app), in: :groups do
-      execute 'make','production'
-    end
-  end
-end
+
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'

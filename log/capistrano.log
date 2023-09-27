@@ -5369,3 +5369,168 @@ remote: Compressing objects:   1% (1/86)[K
  DEBUG [3f1938f8] 	
  DEBUG [3f1938f8] 	(See full trace by running task with --trace)
  DEBUG [3f1938f8] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-09-27 19:52:38 +0000 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+  INFO [2bdc6105] Running /usr/bin/env mkdir -p /home/deploy/apps/blog/rvm1scripts/ on 15.228.43.171
+ DEBUG [2bdc6105] Command: /usr/bin/env mkdir -p /home/deploy/apps/blog/rvm1scripts/
+  INFO [2bdc6105] Finished in 13.042 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/vagrant/.rvm/gems/ruby-3.1.4/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 0.0%
+  INFO Uploading /home/vagrant/.rvm/gems/ruby-3.1.4/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 100.0%
+  INFO [ac22ccff] Running /usr/bin/env chmod +x /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh on 15.228.43.171
+ DEBUG [ac22ccff] Command: /usr/bin/env chmod +x /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh
+  INFO [ac22ccff] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [2b7335e8] Running /usr/bin/env mkdir -p /tmp on 15.228.43.171
+ DEBUG [2b7335e8] Command: /usr/bin/env mkdir -p /tmp
+  INFO [2b7335e8] Finished in 0.045 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-4992b1bf4f359d203c69.sh 0.0%
+  INFO Uploading /tmp/git-ssh-4992b1bf4f359d203c69.sh 100.0%
+  INFO [1817c7f0] Running /usr/bin/env chmod 700 /tmp/git-ssh-4992b1bf4f359d203c69.sh on 15.228.43.171
+ DEBUG [1817c7f0] Command: /usr/bin/env chmod 700 /tmp/git-ssh-4992b1bf4f359d203c69.sh
+  INFO [1817c7f0] Finished in 0.041 seconds with exit status 0 (successful).
+  INFO [0d39b52e] Running /usr/bin/env git ls-remote git@github.com:Reni-amorim/blog.git HEAD on 15.228.43.171
+ DEBUG [0d39b52e] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-4992b1bf4f359d203c69.sh" ; /usr/bin/env git ls-remote git@github.com:Reni-amorim/blog.git HEAD )
+ DEBUG [0d39b52e] 	a348f3c49bf4c85d46bcd007bdc1bd5a65c34213
+ DEBUG [0d39b52e] 		
+ DEBUG [0d39b52e] 	HEAD
+ DEBUG [0d39b52e] 	
+  INFO [0d39b52e] Finished in 1.843 seconds with exit status 0 (successful).
+  INFO [846b567d] Running /usr/bin/env mkdir -p /home/deploy/apps/blog/shared /home/deploy/apps/blog/releases on 15.228.43.171
+ DEBUG [846b567d] Command: /usr/bin/env mkdir -p /home/deploy/apps/blog/shared /home/deploy/apps/blog/releases
+  INFO [846b567d] Finished in 0.042 seconds with exit status 0 (successful).
+  INFO [ab022aa2] Running /usr/bin/env mkdir -p /home/deploy/apps/blog/shared/public/assets on 15.228.43.171
+ DEBUG [ab022aa2] Command: /usr/bin/env mkdir -p /home/deploy/apps/blog/shared/public/assets
+  INFO [ab022aa2] Finished in 0.043 seconds with exit status 0 (successful).
+ DEBUG [0af5b91a] Running [ -f /home/deploy/apps/blog/shared/puma.rb ] on 15.228.43.171
+ DEBUG [0af5b91a] Command: [ -f /home/deploy/apps/blog/shared/puma.rb ]
+ DEBUG [0af5b91a] Finished in 0.038 seconds with exit status 0 (successful).
+ DEBUG [7b93db5f] Running [ -f /home/deploy/apps/blog/current/REVISION ] on 15.228.43.171
+ DEBUG [7b93db5f] Command: [ -f /home/deploy/apps/blog/current/REVISION ]
+ DEBUG [7b93db5f] Finished in 0.038 seconds with exit status 1 (failed).
+ DEBUG [941b3015] Running [ -f /home/deploy/apps/blog/repo/HEAD ] on 15.228.43.171
+ DEBUG [941b3015] Command: [ -f /home/deploy/apps/blog/repo/HEAD ]
+ DEBUG [941b3015] Finished in 0.039 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/apps/blog/repo
+ DEBUG [9d6d9da4] Running if test ! -d /home/deploy/apps/blog/repo; then echo "Directory does not exist '/home/deploy/apps/blog/repo'" 1>&2; false; fi on 15.228.43.171
+ DEBUG [9d6d9da4] Command: if test ! -d /home/deploy/apps/blog/repo; then echo "Directory does not exist '/home/deploy/apps/blog/repo'" 1>&2; false; fi
+ DEBUG [9d6d9da4] Finished in 0.041 seconds with exit status 0 (successful).
+  INFO [0d1e206b] Running /usr/bin/env git remote set-url origin git@github.com:Reni-amorim/blog.git on 15.228.43.171
+ DEBUG [0d1e206b] Command: cd /home/deploy/apps/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-4992b1bf4f359d203c69.sh" ; /usr/bin/env git remote set-url origin git@github.com:Reni-amorim/blog.git )
+  INFO [0d1e206b] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [25778b1b] Running /usr/bin/env git remote update --prune on 15.228.43.171
+ DEBUG [25778b1b] Command: cd /home/deploy/apps/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-4992b1bf4f359d203c69.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [25778b1b] 	Fetching origin
+ DEBUG [25778b1b] 	
+ DEBUG [25778b1b] 	remote: Enumerating objects: 15, done.[K
+ DEBUG [25778b1b] 	
+ DEBUG [25778b1b] 	remote: Counting objects:   6% (1/15)[K
+ DEBUG [25778b1b] 	remote: Counting objects:  13% (2/15)[K
+ DEBUG [25778b1b] 	remote: Counting objects:  20% (3/15)[K
+ DEBUG [25778b1b] 	remote: Counting objects:  26% (4/15)[K
+ DEBUG [25778b1b] 	remote: Counting objects:  33% (5/15)[K
+ DEBUG [25778b1b] 	remote: Counting objects:  40% (6/15)[K
+ DEBUG [25778b1b] 	remote: Counting objects:  46% (7/15)[K
+ DEBUG [25778b1b] 	remote: Counting objects:  53% (8/15)[K
+ DEBUG [25778b1b] 	remote: Counting objects:  60% (9/15)[K
+ DEBUG [25778b1b] 	remote: Counting objects:  66% (10/15)[K
+ DEBUG [25778b1b] 	remote: Counting objects:  73% (11/15)[K
+ DEBUG [25778b1b] 	remote: Counting objects:  80% (12/15)[K
+ DEBUG [25778b1b] 	remote: Counting objects:  86% (13/15)[K
+ DEBUG [25778b1b] 	remote: Counting objects:  93% (14/15)[K
+ DEBUG [25778b1b] 	remote: Counting objects: 100% (15/15)[K
+ DEBUG [25778b1b] 	remote: Counting objects: 100% (15/15), done.[K
+ DEBUG [25778b1b] 	
+ DEBUG [25778b1b] 	remote: Compressing objects:  50% (1/2)[K
+ DEBUG [25778b1b] 	remote: Compressing objects: 100% (2/2)[K
+ DEBUG [25778b1b] 	remote: Compressing objects: 100% (2/2), done.[K
+ DEBUG [25778b1b] 	
+ DEBUG [25778b1b] 	remote: Total 8 (delta 5), reused 8 (delta 5), pack-reused 0[K
+ DEBUG [25778b1b] 	
+ DEBUG [25778b1b] 	Unpacking objects:  12% (1/8)
+ DEBUG [25778b1b] 	Unpacking objects:  25% (2/8)
+ DEBUG [25778b1b] 	Unpacking objects:  37% (3/8)
+ DEBUG [25778b1b] 	Unpacking objects:  50% (4/8)
+ DEBUG [25778b1b] 	Unpacking objects:  62% (5/8)
+ DEBUG [25778b1b] 	Unpacking objects:  75% (6/8)
+ DEBUG [25778b1b] 	Unpacking objects:  87% (7/8)
+ DEBUG [25778b1b] 	Unpacking objects: 100% (8/8)
+ DEBUG [25778b1b] 	Unpacking objects: 100% (8/8), 2.56 KiB | 186.00 KiB/s, done.
+ DEBUG [25778b1b] 	
+ DEBUG [25778b1b] 	From github.com:Reni-amorim/blog
+ DEBUG [25778b1b] 	
+ DEBUG [25778b1b] 	   f47c71d..9c4abea  master     -> master
+ DEBUG [25778b1b] 	
+  INFO [25778b1b] Finished in 1.939 seconds with exit status 0 (successful).
+ DEBUG [38557cdc] Running if test ! -d /home/deploy/apps/blog/repo; then echo "Directory does not exist '/home/deploy/apps/blog/repo'" 1>&2; false; fi on 15.228.43.171
+ DEBUG [38557cdc] Command: if test ! -d /home/deploy/apps/blog/repo; then echo "Directory does not exist '/home/deploy/apps/blog/repo'" 1>&2; false; fi
+ DEBUG [38557cdc] Finished in 0.040 seconds with exit status 0 (successful).
+  INFO [bedbe33f] Running /usr/bin/env mkdir -p /home/deploy/apps/blog/releases/20230927195253 on 15.228.43.171
+ DEBUG [bedbe33f] Command: cd /home/deploy/apps/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-4992b1bf4f359d203c69.sh" ; /usr/bin/env mkdir -p /home/deploy/apps/blog/releases/20230927195253 )
+  INFO [bedbe33f] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO [3234dc0f] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/blog/releases/20230927195253 on 15.228.43.171
+ DEBUG [3234dc0f] Command: cd /home/deploy/apps/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-4992b1bf4f359d203c69.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/blog/releases/20230927195253 )
+  INFO [3234dc0f] Finished in 0.052 seconds with exit status 0 (successful).
+ DEBUG [fbc90c52] Running if test ! -d /home/deploy/apps/blog/repo; then echo "Directory does not exist '/home/deploy/apps/blog/repo'" 1>&2; false; fi on 15.228.43.171
+ DEBUG [fbc90c52] Command: if test ! -d /home/deploy/apps/blog/repo; then echo "Directory does not exist '/home/deploy/apps/blog/repo'" 1>&2; false; fi
+ DEBUG [fbc90c52] Finished in 0.042 seconds with exit status 0 (successful).
+ DEBUG [46fcdc86] Running /usr/bin/env git rev-list --max-count=1 master on 15.228.43.171
+ DEBUG [46fcdc86] Command: cd /home/deploy/apps/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-4992b1bf4f359d203c69.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [46fcdc86] 	9c4abea29667bad783817fd59e2ec4cdfd0ac8da
+ DEBUG [46fcdc86] 	
+ DEBUG [46fcdc86] Finished in 0.043 seconds with exit status 0 (successful).
+ DEBUG [c44a0e73] Running if test ! -d /home/deploy/apps/blog/releases/20230927195253; then echo "Directory does not exist '/home/deploy/apps/blog/releases/20230927195253'" 1>&2; false; fi on 15.228.43.171
+ DEBUG [c44a0e73] Command: if test ! -d /home/deploy/apps/blog/releases/20230927195253; then echo "Directory does not exist '/home/deploy/apps/blog/releases/20230927195253'" 1>&2; false; fi
+ DEBUG [c44a0e73] Finished in 0.039 seconds with exit status 0 (successful).
+  INFO [d0eee5b0] Running /usr/bin/env echo "9c4abea29667bad783817fd59e2ec4cdfd0ac8da" > REVISION on 15.228.43.171
+ DEBUG [d0eee5b0] Command: cd /home/deploy/apps/blog/releases/20230927195253 && /usr/bin/env echo "9c4abea29667bad783817fd59e2ec4cdfd0ac8da" > REVISION
+  INFO [d0eee5b0] Finished in 0.041 seconds with exit status 0 (successful).
+  INFO [5e68db6b] Running /usr/bin/env mkdir -p /home/deploy/apps/blog/releases/20230927195253/public on 15.228.43.171
+ DEBUG [5e68db6b] Command: /usr/bin/env mkdir -p /home/deploy/apps/blog/releases/20230927195253/public
+  INFO [5e68db6b] Finished in 0.044 seconds with exit status 0 (successful).
+ DEBUG [aa11e503] Running [ -L /home/deploy/apps/blog/releases/20230927195253/public/assets ] on 15.228.43.171
+ DEBUG [aa11e503] Command: [ -L /home/deploy/apps/blog/releases/20230927195253/public/assets ]
+ DEBUG [aa11e503] Finished in 0.039 seconds with exit status 1 (failed).
+ DEBUG [dd20d5b0] Running [ -d /home/deploy/apps/blog/releases/20230927195253/public/assets ] on 15.228.43.171
+ DEBUG [dd20d5b0] Command: [ -d /home/deploy/apps/blog/releases/20230927195253/public/assets ]
+ DEBUG [dd20d5b0] Finished in 0.039 seconds with exit status 1 (failed).
+  INFO [049d7580] Running /usr/bin/env ln -s /home/deploy/apps/blog/shared/public/assets /home/deploy/apps/blog/releases/20230927195253/public/assets on 15.228.43.171
+ DEBUG [049d7580] Command: /usr/bin/env ln -s /home/deploy/apps/blog/shared/public/assets /home/deploy/apps/blog/releases/20230927195253/public/assets
+  INFO [049d7580] Finished in 0.044 seconds with exit status 0 (successful).
+ DEBUG [2257d06e] Running if test ! -d /home/deploy/apps/blog/releases/20230927195253; then echo "Directory does not exist '/home/deploy/apps/blog/releases/20230927195253'" 1>&2; false; fi on 15.228.43.171
+ DEBUG [2257d06e] Command: if test ! -d /home/deploy/apps/blog/releases/20230927195253; then echo "Directory does not exist '/home/deploy/apps/blog/releases/20230927195253'" 1>&2; false; fi
+ DEBUG [2257d06e] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO [b9942ca5] Running /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh ruby-3.1.4 bundle config --local deployment true on 15.228.43.171
+ DEBUG [b9942ca5] Command: cd /home/deploy/apps/blog/releases/20230927195253 && /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh ruby-3.1.4 bundle config --local deployment true
+  INFO [b9942ca5] Finished in 2.306 seconds with exit status 0 (successful).
+  INFO [ea094a98] Running /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh ruby-3.1.4 bundle config --local path /home/deploy/apps/blog/shared/bundle on 15.228.43.171
+ DEBUG [ea094a98] Command: cd /home/deploy/apps/blog/releases/20230927195253 && /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh ruby-3.1.4 bundle config --local path /home/deploy/apps/blog/shared/bundle
+  INFO [ea094a98] Finished in 0.819 seconds with exit status 0 (successful).
+  INFO [edf6f351] Running /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh ruby-3.1.4 bundle config --local without development:test on 15.228.43.171
+ DEBUG [edf6f351] Command: cd /home/deploy/apps/blog/releases/20230927195253 && /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh ruby-3.1.4 bundle config --local without development:test
+  INFO [edf6f351] Finished in 0.803 seconds with exit status 0 (successful).
+ DEBUG [a2a5418b] Running if test ! -d /home/deploy/apps/blog/releases/20230927195253; then echo "Directory does not exist '/home/deploy/apps/blog/releases/20230927195253'" 1>&2; false; fi on 15.228.43.171
+ DEBUG [a2a5418b] Command: if test ! -d /home/deploy/apps/blog/releases/20230927195253; then echo "Directory does not exist '/home/deploy/apps/blog/releases/20230927195253'" 1>&2; false; fi
+ DEBUG [a2a5418b] Finished in 0.040 seconds with exit status 0 (successful).
+ DEBUG [4cc710b4] Running /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh ruby-3.1.4 bundle check on 15.228.43.171
+ DEBUG [4cc710b4] Command: cd /home/deploy/apps/blog/releases/20230927195253 && /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh ruby-3.1.4 bundle check
+ DEBUG [4cc710b4] 	The Gemfile's dependencies are satisfied
+ DEBUG [4cc710b4] 	
+ DEBUG [4cc710b4] Finished in 1.098 seconds with exit status 0 (successful).
+  INFO The Gemfile's dependencies are satisfied, skipping installation
+ DEBUG [3da9f484] Running if test ! -d /home/deploy/apps/blog/releases/20230927195253; then echo "Directory does not exist '/home/deploy/apps/blog/releases/20230927195253'" 1>&2; false; fi on 15.228.43.171
+ DEBUG [3da9f484] Command: if test ! -d /home/deploy/apps/blog/releases/20230927195253; then echo "Directory does not exist '/home/deploy/apps/blog/releases/20230927195253'" 1>&2; false; fi
+ DEBUG [3da9f484] Finished in 0.039 seconds with exit status 0 (successful).
+  INFO [9867bc83] Running /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh ruby-3.1.4 bundle exec rake assets:precompile on 15.228.43.171
+ DEBUG [9867bc83] Command: cd /home/deploy/apps/blog/releases/20230927195253 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh ruby-3.1.4 bundle exec rake assets:precompile )
+ DEBUG [9867bc83] 	rake aborted!
+ DEBUG [9867bc83] 	
+ DEBUG [9867bc83] 	No Rakefile found (looking for: rakefile, Rakefile, rakefile.rb, Rakefile.rb)
+ DEBUG [9867bc83] 	
+ DEBUG [9867bc83] 	/home/deploy/apps/blog/shared/bundle/ruby/3.1.0/gems/rake-13.0.6/exe/rake:27:in `<top (required)>'
+ DEBUG [9867bc83] 	
+ DEBUG [9867bc83] 	/home/deploy/.rvm/gems/ruby-3.1.4/bin/ruby_executable_hooks:22:in `eval'
+ DEBUG [9867bc83] 	
+ DEBUG [9867bc83] 	/home/deploy/.rvm/gems/ruby-3.1.4/bin/ruby_executable_hooks:22:in `<main>'
+ DEBUG [9867bc83] 	
+ DEBUG [9867bc83] 	(See full trace by running task with --trace)
+ DEBUG [9867bc83] 	
