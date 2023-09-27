@@ -7,15 +7,11 @@ set :user,            'deploy'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
-#set deploy config to trust project https://rvm.io/deployment/capistrano#environment
 
-namespace :rvm do
-  task :trust_rvmrc do
-    run "rvm rvmrc trust #{release_path}"
-  end
-end
 
 # Don't change these unless you know what you're doing
+##### SET RVM BUNDLER 
+set :rvm_map_bins, %w{gem rake ruby rails bundle}
 set :pty,             true
 set :use_sudo,        false
 set :stage,           :production
