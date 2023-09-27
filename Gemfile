@@ -53,3 +53,5 @@ gem 'puma'
 #Shellwords para bundler
 gem "shellwords", "~> 0.1.0"
 
+#gem rake with version
+gem 'rake' , "~> 13.0.6"
