@@ -4782,3 +4782,438 @@ remote: Compressing objects:   1% (1/77)[Kremote: Compressing objects:   2% (2
  DEBUG [c4286d7b] 	
  DEBUG [c4286d7b] 	(See full trace by running task with --trace)
  DEBUG [c4286d7b] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-09-27 15:56:06 +0000 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+  INFO [0ea6bc88] Running /usr/bin/env mkdir -p /home/deploy/apps/blog/rvm1scripts/ on 15.228.43.171
+ DEBUG [0ea6bc88] Command: /usr/bin/env mkdir -p /home/deploy/apps/blog/rvm1scripts/
+  INFO [0ea6bc88] Finished in 5.071 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/vagrant/.rvm/gems/ruby-3.1.4/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 0.0%
+  INFO Uploading /home/vagrant/.rvm/gems/ruby-3.1.4/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 100.0%
+  INFO [76b8ea7c] Running /usr/bin/env chmod +x /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh on 15.228.43.171
+ DEBUG [76b8ea7c] Command: /usr/bin/env chmod +x /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh
+  INFO [76b8ea7c] Finished in 0.042 seconds with exit status 0 (successful).
+  INFO [00fdc5ec] Running /usr/bin/env mkdir -p /tmp on 15.228.43.171
+ DEBUG [00fdc5ec] Command: /usr/bin/env mkdir -p /tmp
+  INFO [00fdc5ec] Finished in 0.043 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-39c3e1cc9c56a79cf7b6.sh 0.0%
+  INFO Uploading /tmp/git-ssh-39c3e1cc9c56a79cf7b6.sh 100.0%
+  INFO [e3ecdd55] Running /usr/bin/env chmod 700 /tmp/git-ssh-39c3e1cc9c56a79cf7b6.sh on 15.228.43.171
+ DEBUG [e3ecdd55] Command: /usr/bin/env chmod 700 /tmp/git-ssh-39c3e1cc9c56a79cf7b6.sh
+  INFO [e3ecdd55] Finished in 0.036 seconds with exit status 0 (successful).
+  INFO [32d144ec] Running /usr/bin/env git ls-remote git@github.com:Reni-amorim/blog.git HEAD on 15.228.43.171
+ DEBUG [32d144ec] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-39c3e1cc9c56a79cf7b6.sh" ; /usr/bin/env git ls-remote git@github.com:Reni-amorim/blog.git HEAD )
+ DEBUG [32d144ec] 	a348f3c49bf4c85d46bcd007bdc1bd5a65c34213
+ DEBUG [32d144ec] 		
+ DEBUG [32d144ec] 	HEAD
+ DEBUG [32d144ec] 	
+  INFO [32d144ec] Finished in 2.313 seconds with exit status 0 (successful).
+  INFO [500f9582] Running /usr/bin/env mkdir -p /home/deploy/apps/blog/shared /home/deploy/apps/blog/releases on 15.228.43.171
+ DEBUG [500f9582] Command: /usr/bin/env mkdir -p /home/deploy/apps/blog/shared /home/deploy/apps/blog/releases
+  INFO [500f9582] Finished in 0.043 seconds with exit status 0 (successful).
+  INFO [c6fb6da2] Running /usr/bin/env mkdir -p /home/deploy/apps/blog/shared/public/assets on 15.228.43.171
+ DEBUG [c6fb6da2] Command: /usr/bin/env mkdir -p /home/deploy/apps/blog/shared/public/assets
+  INFO [c6fb6da2] Finished in 0.040 seconds with exit status 0 (successful).
+ DEBUG [afb016f7] Running [ -f /home/deploy/apps/blog/shared/puma.rb ] on 15.228.43.171
+ DEBUG [afb016f7] Command: [ -f /home/deploy/apps/blog/shared/puma.rb ]
+ DEBUG [afb016f7] Finished in 0.049 seconds with exit status 1 (failed).
+  WARN puma.rb NOT FOUND!
+ DEBUG Uploading /home/deploy/apps/blog/shared/puma.rb 0.0%
+  INFO Uploading /home/deploy/apps/blog/shared/puma.rb 100.0%
+  INFO puma.rb generated
+ DEBUG [4c8c20e8] Running [ -f /home/deploy/apps/blog/current/REVISION ] on 15.228.43.171
+ DEBUG [4c8c20e8] Command: [ -f /home/deploy/apps/blog/current/REVISION ]
+ DEBUG [4c8c20e8] Finished in 0.039 seconds with exit status 1 (failed).
+ DEBUG [f2b215ed] Running [ -f /home/deploy/apps/blog/repo/HEAD ] on 15.228.43.171
+ DEBUG [f2b215ed] Command: [ -f /home/deploy/apps/blog/repo/HEAD ]
+ DEBUG [f2b215ed] Finished in 0.037 seconds with exit status 1 (failed).
+ DEBUG [41a35622] Running if test ! -d /home/deploy/apps/blog; then echo "Directory does not exist '/home/deploy/apps/blog'" 1>&2; false; fi on 15.228.43.171
+ DEBUG [41a35622] Command: if test ! -d /home/deploy/apps/blog; then echo "Directory does not exist '/home/deploy/apps/blog'" 1>&2; false; fi
+ DEBUG [41a35622] Finished in 0.037 seconds with exit status 0 (successful).
+  INFO [8bd9920b] Running /usr/bin/env git clone --mirror git@github.com:Reni-amorim/blog.git /home/deploy/apps/blog/repo on 15.228.43.171
+ DEBUG [8bd9920b] Command: cd /home/deploy/apps/blog && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-39c3e1cc9c56a79cf7b6.sh" ; /usr/bin/env git clone --mirror git@github.com:Reni-amorim/blog.git /home/deploy/apps/blog/repo )
+ DEBUG [8bd9920b] 	Cloning into bare repository '/home/deploy/apps/blog/repo'...
+ DEBUG [8bd9920b] 	
+ DEBUG [8bd9920b] 	remote: Enumerating objects: 174, done.[K
+ DEBUG [8bd9920b] 	
+ DEBUG [8bd9920b] 	remote: Counting objects:   0% (1/174)[K
+ DEBUG [8bd9920b] 	remote: Counting objects:   1% (2/174)[K
+ DEBUG [8bd9920b] 	remote: Counting objects:   2% (4/174)[K
+ DEBUG [8bd9920b] 	remote: Counting objects:   3% (6/174)[Kremote: Counting objects:   4% (7/174)[K
+ DEBUG [8bd9920b] 	remote: Counting objects:   5% (9/174)[Kremote: Counting objects:   6% (11/174)[Kremote: Counting objects:   7% (13/174)[Kremote: Counting objects:   8% (14/174)[Kremote: Counting objects:   9% (16/174)[Kremote: Counting objects:  10% (18/174)[Kremote: Counting objects:  11% (20/174)[Kremote: Counting objects:  12% (21/174)[Kremote: Counting objects:  13% (23/174)[Kremote: Counting objects:  14% (25/174)[K
+ DEBUG [8bd9920b] 	remote: Counting objects:  15% (27/174)[Kremote: Counting objects:  16% (28/174)[Kremote: Counting objects:  17% (30/174)[Kremote: Counting objects:  18% (32/174)[Kremote: Counting objects:  19% (34/174)[Kremote: Counting objects:  20% (35/174)[Kremote: Counting objects:  21% (37/174)[Kremote: Counting objects:  22% (39/174)[Kremote: Counting objects:  23% (41/174)[K
+ DEBUG [8bd9920b] 	remote: Counting objects:  24% (42/174)[Kremote: Counting objects:  25% (44/174)[Kremote: Counting objects:  26% (46/174)[Kremote: Counting objects:  27% (47/174)[Kremote: Counting objects:  28% (49/174)[Kremote: Counting objects:  29% (51/174)[Kremote: Counting objects:  30% (53/174)[Kremote: Counting objects:  31% (54/174)[Kremote: Counting objects:  32% (56/174)[Kremote: Counting objects:  33% (58/174)[K
+ DEBUG [8bd9920b] 	remote: Counting objects:  34% (60/174)[Kremote: Counting objects:  35% (61/174)[Kremote: Counting objects:  36% (63/174)[Kremote: Counting objects:  37% (65/174)[Kremote: Counting objects:  38% (67/174)[Kremote: Counting objects:  39% (68/174)[Kremote: Counting objects:  40% (70/174)[Kremote: Counting objects:  41% (72/174)[K
+ DEBUG [8bd9920b] 	remote: Counting objects:  42% (74/174)[Kremote: Counting objects:  43% (75/174)[Kremote: Counting objects:  44% (77/174)[Kremote: Counting objects:  45% (79/174)[Kremote: Counting objects:  46% (81/174)[Kremote: Counting objects:  47% (82/174)[Kremote: Counting objects:  48% (84/174)[Kremote: Counting objects:  49% (86/174)[Kremote: Counting objects:  50% (87/174)[K
+ DEBUG [8bd9920b] 	remote: Counting objects:  51% (89/174)[Kremote: Counting objects:  52% (91/174)[Kremote: Counting objects:  53% (93/174)[Kremote: Counting objects:  54% (94/174)[Kremote: Counting objects:  55% (96/174)[Kremote: Counting objects:  56% (98/174)[Kremote: Counting objects:  57% (100/174)[K
+ DEBUG [8bd9920b] 	remote: Counting objects:  58% (101/174)[Kremote: Counting objects:  59% (103/174)[Kremote: Counting objects:  60% (105/174)[Kremote: Counting objects:  61% (107/174)[K
+ DEBUG [8bd9920b] 	remote: Counting objects:  62% (108/174)[Kremote: Counting objects:  63% (110/174)[Kremote: Counting objects:  64% (112/174)[Kremote: Counting objects:  65% (114/174)[Kremote: Counting objects:  66% (115/174)[Kremote: Counting objects:  67% (117/174)[K
+ DEBUG [8bd9920b] 	remote: Counting objects:  68% (119/174)[Kremote: Counting objects:  69% (121/174)[Kremote: Counting objects:  70% (122/174)[Kremote: Counting objects:  71% (124/174)[Kremote: Counting objects:  72% (126/174)[K
+ DEBUG [8bd9920b] 	remote: Counting objects:  73% (128/174)[Kremote: Counting objects:  74% (129/174)[Kremote: Counting objects:  75% (131/174)[Kremote: Counting objects:  76% (133/174)[Kremote: Counting objects:  77% (134/174)[Kremote: Counting objects:  78% (136/174)[Kremote: Counting objects:  79% (138/174)[K
+ DEBUG [8bd9920b] 	remote: Counting objects:  80% (140/174)[Kremote: Counting objects:  81% (141/174)[Kremote: Counting objects:  82% (143/174)[Kremote: Counting objects:  83% (145/174)[Kremote: Counting objects:  84% (147/174)[Kremote: Counting objects:  85% (148/174)[K
+ DEBUG [8bd9920b] 	remote: Counting objects:  86% (150/174)[Kremote: Counting objects:  87% (152/174)[Kremote: Counting objects:  88% (154/174)[Kremote: Counting objects:  89% (155/174)[Kremote: Counting objects:  90% (157/174)[K
+ DEBUG [8bd9920b] 	remote: Counting objects:  91% (159/174)[Kremote: Counting objects:  92% (161/174)[Kremote: Counting objects:  93% (162/174)[Kremote: Counting objects:  94% (164/174)[Kremote: Counting objects:  95% (166/174)[Kremote: Counting objects:  96% (168/174)[Kremote: Counting objects:  97% (169/174)[K
+ DEBUG [8bd9920b] 	remote: Counting objects:  98% (171/174)[Kremote: Counting objects:  99% (173/174)[Kremote: Counting objects: 100% (174/174)[Kremote: Counting objects: 100% (174/174), done.[K
+remote: Compressing objects:   1% (1/86)[K
+ DEBUG [8bd9920b] 	remote: Compressing objects:   2% (2/86)[Kremote: Compressing objects:   3% (3/86)[Kremote: Compressing objects:   4% (4/86)[Kremote: Compressing objects:   5% (5/86)[Kremote: Compressing objects:   6% (6/86)[Kremote: Compressing objects:   8% (7/86)[K
+ DEBUG [8bd9920b] 	remote: Compressing objects:   9% (8/86)[Kremote: Compressing objects:  10% (9/86)[Kremote: Compressing objects:  11% (10/86)[Kremote: Compressing objects:  12% (11/86)[Kremote: Compressing objects:  13% (12/86)[K
+ DEBUG [8bd9920b] 	remote: Compressing objects:  15% (13/86)[Kremote: Compressing objects:  16% (14/86)[Kremote: Compressing objects:  17% (15/86)[Kremote: Compressing objects:  18% (16/86)[Kremote: Compressing objects:  19% (17/86)[K
+ DEBUG [8bd9920b] 	remote: Compressing objects:  20% (18/86)[K
+ DEBUG [8bd9920b] 	remote: Compressing objects:  22% (19/86)[Kremote: Compressing objects:  23% (20/86)[Kremote: Compressing objects:  24% (21/86)[Kremote: Compressing objects:  25% (22/86)[Kremote: Compressing objects:  26% (23/86)[K
+ DEBUG [8bd9920b] 	remote: Compressing objects:  27% (24/86)[Kremote: Compressing objects:  29% (25/86)[Kremote: Compressing objects:  30% (26/86)[Kremote: Compressing objects:  31% (27/86)[Kremote: Compressing objects:  32% (28/86)[Kremote: Compressing objects:  33% (29/86)[Kremote: Compressing objects:  34% (30/86)[Kremote: Compressing objects:  36% (31/86)[Kremote: Compressing objects:  37% (32/86)[Kremote: Compressing objects:  38% (33/86)[Kremote: Compressing objects:  39% (34/86)[Kremote: Compressing objects:  40% (35/86)[Kremote: Compressing objects:  41% (36/86)[Kremote: Compressing objects:  43% (37/86)[Kremote: Compressing objects:  44% (38/86)[Kremote: Compressing objects:  45% (39/86)[K
+ DEBUG [8bd9920b] 	remote: Compressing objects:  46% (40/86)[Kremote: Compressing objects:  47% (41/86)[Kremote: Compressing objects:  48% (42/86)[Kremote: Compressing objects:  50% (43/86)[Kremote: Compressing objects:  51% (44/86)[Kremote: Compressing objects:  52% (45/86)[Kremote: Compressing objects:  53% (46/86)[Kremote: Compressing objects:  54% (47/86)[Kremote: Compressing objects:  55% (48/86)[Kremote: Compressing objects:  56% (49/86)[Kremote: Compressing objects:  58% (50/86)[K
+ DEBUG [8bd9920b] 	remote: Compressing objects:  59% (51/86)[Kremote: Compressing objects:  60% (52/86)[Kremote: Compressing objects:  61% (53/86)[Kremote: Compressing objects:  62% (54/86)[Kremote: Compressing objects:  63% (55/86)[Kremote: Compressing objects:  65% (56/86)[Kremote: Compressing objects:  66% (57/86)[K
+ DEBUG [8bd9920b] 	remote: Compressing objects:  67% (58/86)[Kremote: Compressing objects:  68% (59/86)[Kremote: Compressing objects:  69% (60/86)[Kremote: Compressing objects:  70% (61/86)[Kremote: Compressing objects:  72% (62/86)[Kremote: Compressing objects:  73% (63/86)[Kremote: Compressing objects:  74% (64/86)[Kremote: Compressing objects:  75% (65/86)[K
+ DEBUG [8bd9920b] 	remote: Compressing objects:  76% (66/86)[Kremote: Compressing objects:  77% (67/86)[Kremote: Compressing objects:  79% (68/86)[Kremote: Compressing objects:  80% (69/86)[Kremote: Compressing objects:  81% (70/86)[Kremote: Compressing objects:  82% (71/86)[Kremote: Compressing objects:  83% (72/86)[Kremote: Compressing objects:  84% (73/86)[Kremote: Compressing objects:  86% (74/86)[Kremote: Compressing objects:  87% (75/86)[Kremote: Compressing objects:  88% (76/86)[K
+ DEBUG [8bd9920b] 	remote: Compressing objects:  89% (77/86)[Kremote: Compressing objects:  90% (78/86)[Kremote: Compressing objects:  91% (79/86)[Kremote: Compressing objects:  93% (80/86)[Kremote: Compressing objects:  94% (81/86)[Kremote: Compressing objects:  95% (82/86)[Kremote: Compressing objects:  96% (83/86)[Kremote: Compressing objects:  97% (84/86)[Kremote: Compressing objects:  98% (85/86)[K
+ DEBUG [8bd9920b] 	remote: Compressing objects: 100% (86/86)[Kremote: Compressing objects: 100% (86/86), done.[K
+ DEBUG [8bd9920b] 	remote: Total 174 (delta 75), reused 148 (delta 52), pack-reused 0[K
+ DEBUG [8bd9920b] 	
+ DEBUG [8bd9920b] 	Receiving objects:   0% (1/174)
+ DEBUG [8bd9920b] 	Receiving objects:   1% (2/174)
+ DEBUG [8bd9920b] 	Receiving objects:   2% (4/174)
+ DEBUG [8bd9920b] 	Receiving objects:   3% (6/174)
+ DEBUG [8bd9920b] 	Receiving objects:   4% (7/174)
+ DEBUG [8bd9920b] 	Receiving objects:   5% (9/174)
+ DEBUG [8bd9920b] 	Receiving objects:   6% (11/174)
+ DEBUG [8bd9920b] 	Receiving objects:   7% (13/174)
+ DEBUG [8bd9920b] 	Receiving objects:   8% (14/174)
+ DEBUG [8bd9920b] 	Receiving objects:   9% (16/174)
+ DEBUG [8bd9920b] 	Receiving objects:  10% (18/174)
+ DEBUG [8bd9920b] 	Receiving objects:  11% (20/174)
+ DEBUG [8bd9920b] 	Receiving objects:  12% (21/174)
+ DEBUG [8bd9920b] 	Receiving objects:  13% (23/174)
+ DEBUG [8bd9920b] 	Receiving objects:  14% (25/174)
+ DEBUG [8bd9920b] 	Receiving objects:  15% (27/174)
+ DEBUG [8bd9920b] 	Receiving objects:  16% (28/174)
+ DEBUG [8bd9920b] 	Receiving objects:  17% (30/174)
+ DEBUG [8bd9920b] 	Receiving objects:  18% (32/174)
+ DEBUG [8bd9920b] 	Receiving objects:  19% (34/174)
+ DEBUG [8bd9920b] 	Receiving objects:  20% (35/174)
+ DEBUG [8bd9920b] 	Receiving objects:  21% (37/174)
+ DEBUG [8bd9920b] 	Receiving objects:  22% (39/174)
+ DEBUG [8bd9920b] 	Receiving objects:  23% (41/174)
+ DEBUG [8bd9920b] 	Receiving objects:  24% (42/174)
+ DEBUG [8bd9920b] 	Receiving objects:  25% (44/174)
+ DEBUG [8bd9920b] 	Receiving objects:  26% (46/174)
+ DEBUG [8bd9920b] 	Receiving objects:  27% (47/174)
+ DEBUG [8bd9920b] 	Receiving objects:  28% (49/174)
+ DEBUG [8bd9920b] 	Receiving objects:  29% (51/174)
+ DEBUG [8bd9920b] 	Receiving objects:  30% (53/174)
+ DEBUG [8bd9920b] 	Receiving objects:  31% (54/174)
+ DEBUG [8bd9920b] 	Receiving objects:  32% (56/174)
+ DEBUG [8bd9920b] 	Receiving objects:  33% (58/174)
+ DEBUG [8bd9920b] 	Receiving objects:  34% (60/174)
+ DEBUG [8bd9920b] 	Receiving objects:  35% (61/174)
+ DEBUG [8bd9920b] 	Receiving objects:  36% (63/174)
+ DEBUG [8bd9920b] 	Receiving objects:  37% (65/174)
+ DEBUG [8bd9920b] 	Receiving objects:  38% (67/174)
+ DEBUG [8bd9920b] 	Receiving objects:  39% (68/174)
+ DEBUG [8bd9920b] 	Receiving objects:  40% (70/174)
+ DEBUG [8bd9920b] 	Receiving objects:  41% (72/174)
+ DEBUG [8bd9920b] 	Receiving objects:  42% (74/174)
+ DEBUG [8bd9920b] 	Receiving objects:  43% (75/174)
+ DEBUG [8bd9920b] 	Receiving objects:  44% (77/174)
+ DEBUG [8bd9920b] 	Receiving objects:  45% (79/174)
+ DEBUG [8bd9920b] 	Receiving objects:  46% (81/174)
+ DEBUG [8bd9920b] 	Receiving objects:  47% (82/174)
+ DEBUG [8bd9920b] 	Receiving objects:  48% (84/174)
+ DEBUG [8bd9920b] 	Receiving objects:  49% (86/174)
+ DEBUG [8bd9920b] 	Receiving objects:  50% (87/174)
+ DEBUG [8bd9920b] 	Receiving objects:  51% (89/174)
+ DEBUG [8bd9920b] 	Receiving objects:  52% (91/174)
+ DEBUG [8bd9920b] 	Receiving objects:  53% (93/174)
+ DEBUG [8bd9920b] 	Receiving objects:  54% (94/174)
+ DEBUG [8bd9920b] 	Receiving objects:  55% (96/174)
+ DEBUG [8bd9920b] 	Receiving objects:  56% (98/174)
+ DEBUG [8bd9920b] 	Receiving objects:  57% (100/174)
+ DEBUG [8bd9920b] 	Receiving objects:  58% (101/174)
+ DEBUG [8bd9920b] 	Receiving objects:  59% (103/174)
+ DEBUG [8bd9920b] 	Receiving objects:  60% (105/174)
+ DEBUG [8bd9920b] 	Receiving objects:  61% (107/174)
+ DEBUG [8bd9920b] 	Receiving objects:  62% (108/174)
+ DEBUG [8bd9920b] 	Receiving objects:  63% (110/174)
+ DEBUG [8bd9920b] 	Receiving objects:  64% (112/174)
+ DEBUG [8bd9920b] 	Receiving objects:  65% (114/174)
+ DEBUG [8bd9920b] 	Receiving objects:  66% (115/174)
+ DEBUG [8bd9920b] 	Receiving objects:  67% (117/174)
+ DEBUG [8bd9920b] 	Receiving objects:  68% (119/174)
+ DEBUG [8bd9920b] 	Receiving objects:  69% (121/174)
+ DEBUG [8bd9920b] 	Receiving objects:  70% (122/174)
+ DEBUG [8bd9920b] 	Receiving objects:  71% (124/174)
+ DEBUG [8bd9920b] 	Receiving objects:  72% (126/174)
+ DEBUG [8bd9920b] 	Receiving objects:  73% (128/174)
+ DEBUG [8bd9920b] 	Receiving objects:  74% (129/174)
+ DEBUG [8bd9920b] 	Receiving objects:  75% (131/174)
+ DEBUG [8bd9920b] 	Receiving objects:  76% (133/174)
+ DEBUG [8bd9920b] 	Receiving objects:  77% (134/174)
+ DEBUG [8bd9920b] 	Receiving objects:  78% (136/174)
+ DEBUG [8bd9920b] 	Receiving objects:  79% (138/174)
+ DEBUG [8bd9920b] 	Receiving objects:  80% (140/174)
+ DEBUG [8bd9920b] 	Receiving objects:  81% (141/174)
+ DEBUG [8bd9920b] 	Receiving objects:  82% (143/174)
+ DEBUG [8bd9920b] 	Receiving objects:  83% (145/174)
+ DEBUG [8bd9920b] 	Receiving objects:  84% (147/174)
+ DEBUG [8bd9920b] 	Receiving objects:  85% (148/174)
+ DEBUG [8bd9920b] 	Receiving objects:  86% (150/174)
+ DEBUG [8bd9920b] 	Receiving objects:  87% (152/174)
+ DEBUG [8bd9920b] 	Receiving objects:  88% (154/174)
+ DEBUG [8bd9920b] 	Receiving objects:  89% (155/174)
+ DEBUG [8bd9920b] 	Receiving objects:  90% (157/174)
+ DEBUG [8bd9920b] 	Receiving objects:  91% (159/174)
+ DEBUG [8bd9920b] 	Receiving objects:  92% (161/174)
+ DEBUG [8bd9920b] 	Receiving objects:  93% (162/174)
+ DEBUG [8bd9920b] 	Receiving objects:  94% (164/174)
+ DEBUG [8bd9920b] 	Receiving objects:  95% (166/174)
+ DEBUG [8bd9920b] 	Receiving objects:  96% (168/174)
+ DEBUG [8bd9920b] 	Receiving objects:  97% (169/174)
+ DEBUG [8bd9920b] 	Receiving objects:  98% (171/174)
+ DEBUG [8bd9920b] 	Receiving objects:  99% (173/174)
+ DEBUG [8bd9920b] 	Receiving objects: 100% (174/174)
+ DEBUG [8bd9920b] 	Receiving objects: 100% (174/174), 66.63 KiB | 6.66 MiB/s, done.
+ DEBUG [8bd9920b] 	
+ DEBUG [8bd9920b] 	Resolving deltas:   0% (0/75)
+ DEBUG [8bd9920b] 	Resolving deltas:   1% (1/75)
+ DEBUG [8bd9920b] 	Resolving deltas:   2% (2/75)
+ DEBUG [8bd9920b] 	Resolving deltas:   4% (3/75)
+ DEBUG [8bd9920b] 	Resolving deltas:   5% (4/75)
+ DEBUG [8bd9920b] 	Resolving deltas:   6% (5/75)
+ DEBUG [8bd9920b] 	Resolving deltas:   8% (6/75)
+ DEBUG [8bd9920b] 	Resolving deltas:   9% (7/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  10% (8/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  12% (9/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  13% (10/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  14% (11/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  16% (12/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  17% (13/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  18% (14/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  20% (15/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  21% (16/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  22% (17/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  24% (18/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  25% (19/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  26% (20/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  28% (21/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  29% (22/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  30% (23/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  32% (24/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  33% (25/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  34% (26/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  36% (27/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  37% (28/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  38% (29/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  40% (30/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  41% (31/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  42% (32/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  44% (33/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  45% (34/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  46% (35/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  48% (36/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  49% (37/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  50% (38/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  52% (39/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  53% (40/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  54% (41/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  56% (42/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  57% (43/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  58% (44/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  60% (45/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  61% (46/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  62% (47/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  64% (48/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  65% (49/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  66% (50/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  68% (51/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  69% (52/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  70% (53/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  72% (54/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  73% (55/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  74% (56/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  76% (57/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  77% (58/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  78% (59/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  80% (60/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  81% (61/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  82% (62/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  84% (63/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  85% (64/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  86% (65/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  88% (66/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  89% (67/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  90% (68/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  92% (69/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  93% (70/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  94% (71/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  96% (72/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  97% (73/75)
+ DEBUG [8bd9920b] 	Resolving deltas:  98% (74/75)
+ DEBUG [8bd9920b] 	Resolving deltas: 100% (75/75)
+ DEBUG [8bd9920b] 	Resolving deltas: 100% (75/75), done.
+ DEBUG [8bd9920b] 	
+  INFO [8bd9920b] Finished in 2.098 seconds with exit status 0 (successful).
+ DEBUG [fd69436c] Running if test ! -d /home/deploy/apps/blog/repo; then echo "Directory does not exist '/home/deploy/apps/blog/repo'" 1>&2; false; fi on 15.228.43.171
+ DEBUG [fd69436c] Command: if test ! -d /home/deploy/apps/blog/repo; then echo "Directory does not exist '/home/deploy/apps/blog/repo'" 1>&2; false; fi
+ DEBUG [fd69436c] Finished in 0.033 seconds with exit status 0 (successful).
+  INFO [9725630d] Running /usr/bin/env git remote set-url origin git@github.com:Reni-amorim/blog.git on 15.228.43.171
+ DEBUG [9725630d] Command: cd /home/deploy/apps/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-39c3e1cc9c56a79cf7b6.sh" ; /usr/bin/env git remote set-url origin git@github.com:Reni-amorim/blog.git )
+  INFO [9725630d] Finished in 0.039 seconds with exit status 0 (successful).
+  INFO [f35df85d] Running /usr/bin/env git remote update --prune on 15.228.43.171
+ DEBUG [f35df85d] Command: cd /home/deploy/apps/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-39c3e1cc9c56a79cf7b6.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [f35df85d] 	Fetching origin
+ DEBUG [f35df85d] 	
+  INFO [f35df85d] Finished in 1.711 seconds with exit status 0 (successful).
+ DEBUG [ec5614e0] Running if test ! -d /home/deploy/apps/blog/repo; then echo "Directory does not exist '/home/deploy/apps/blog/repo'" 1>&2; false; fi on 15.228.43.171
+ DEBUG [ec5614e0] Command: if test ! -d /home/deploy/apps/blog/repo; then echo "Directory does not exist '/home/deploy/apps/blog/repo'" 1>&2; false; fi
+ DEBUG [ec5614e0] Finished in 0.043 seconds with exit status 0 (successful).
+  INFO [fb627d3b] Running /usr/bin/env mkdir -p /home/deploy/apps/blog/releases/20230927155614 on 15.228.43.171
+ DEBUG [fb627d3b] Command: cd /home/deploy/apps/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-39c3e1cc9c56a79cf7b6.sh" ; /usr/bin/env mkdir -p /home/deploy/apps/blog/releases/20230927155614 )
+  INFO [fb627d3b] Finished in 0.042 seconds with exit status 0 (successful).
+  INFO [72a80f21] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/blog/releases/20230927155614 on 15.228.43.171
+ DEBUG [72a80f21] Command: cd /home/deploy/apps/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-39c3e1cc9c56a79cf7b6.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/blog/releases/20230927155614 )
+  INFO [72a80f21] Finished in 0.051 seconds with exit status 0 (successful).
+ DEBUG [181b5920] Running if test ! -d /home/deploy/apps/blog/repo; then echo "Directory does not exist '/home/deploy/apps/blog/repo'" 1>&2; false; fi on 15.228.43.171
+ DEBUG [181b5920] Command: if test ! -d /home/deploy/apps/blog/repo; then echo "Directory does not exist '/home/deploy/apps/blog/repo'" 1>&2; false; fi
+ DEBUG [181b5920] Finished in 0.040 seconds with exit status 0 (successful).
+ DEBUG [6f49501a] Running /usr/bin/env git rev-list --max-count=1 master on 15.228.43.171
+ DEBUG [6f49501a] Command: cd /home/deploy/apps/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-39c3e1cc9c56a79cf7b6.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [6f49501a] 	9d820e5531a92ed5219fa4e961ab3e98754d0d4d
+ DEBUG [6f49501a] 	
+ DEBUG [6f49501a] Finished in 0.040 seconds with exit status 0 (successful).
+ DEBUG [f5efeb00] Running if test ! -d /home/deploy/apps/blog/releases/20230927155614; then echo "Directory does not exist '/home/deploy/apps/blog/releases/20230927155614'" 1>&2; false; fi on 15.228.43.171
+ DEBUG [f5efeb00] Command: if test ! -d /home/deploy/apps/blog/releases/20230927155614; then echo "Directory does not exist '/home/deploy/apps/blog/releases/20230927155614'" 1>&2; false; fi
+ DEBUG [f5efeb00] Finished in 0.037 seconds with exit status 0 (successful).
+  INFO [773ff114] Running /usr/bin/env echo "9d820e5531a92ed5219fa4e961ab3e98754d0d4d" > REVISION on 15.228.43.171
+ DEBUG [773ff114] Command: cd /home/deploy/apps/blog/releases/20230927155614 && /usr/bin/env echo "9d820e5531a92ed5219fa4e961ab3e98754d0d4d" > REVISION
+  INFO [773ff114] Finished in 0.044 seconds with exit status 0 (successful).
+  INFO [4d305424] Running /usr/bin/env mkdir -p /home/deploy/apps/blog/releases/20230927155614/public on 15.228.43.171
+ DEBUG [4d305424] Command: /usr/bin/env mkdir -p /home/deploy/apps/blog/releases/20230927155614/public
+  INFO [4d305424] Finished in 0.040 seconds with exit status 0 (successful).
+ DEBUG [4b7a7d53] Running [ -L /home/deploy/apps/blog/releases/20230927155614/public/assets ] on 15.228.43.171
+ DEBUG [4b7a7d53] Command: [ -L /home/deploy/apps/blog/releases/20230927155614/public/assets ]
+ DEBUG [4b7a7d53] Finished in 0.033 seconds with exit status 1 (failed).
+ DEBUG [b6f5a3e0] Running [ -d /home/deploy/apps/blog/releases/20230927155614/public/assets ] on 15.228.43.171
+ DEBUG [b6f5a3e0] Command: [ -d /home/deploy/apps/blog/releases/20230927155614/public/assets ]
+ DEBUG [b6f5a3e0] Finished in 0.035 seconds with exit status 1 (failed).
+  INFO [bae4ee76] Running /usr/bin/env ln -s /home/deploy/apps/blog/shared/public/assets /home/deploy/apps/blog/releases/20230927155614/public/assets on 15.228.43.171
+ DEBUG [bae4ee76] Command: /usr/bin/env ln -s /home/deploy/apps/blog/shared/public/assets /home/deploy/apps/blog/releases/20230927155614/public/assets
+  INFO [bae4ee76] Finished in 0.040 seconds with exit status 0 (successful).
+ DEBUG [f6bc979e] Running if test ! -d /home/deploy/apps/blog/releases/20230927155614; then echo "Directory does not exist '/home/deploy/apps/blog/releases/20230927155614'" 1>&2; false; fi on 15.228.43.171
+ DEBUG [f6bc979e] Command: if test ! -d /home/deploy/apps/blog/releases/20230927155614; then echo "Directory does not exist '/home/deploy/apps/blog/releases/20230927155614'" 1>&2; false; fi
+ DEBUG [f6bc979e] Finished in 0.042 seconds with exit status 0 (successful).
+  INFO [c42d1e43] Running /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh ruby-3.1.4 bundle config --local deployment true on 15.228.43.171
+ DEBUG [c42d1e43] Command: cd /home/deploy/apps/blog/releases/20230927155614 && /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh ruby-3.1.4 bundle config --local deployment true
+  INFO [c42d1e43] Finished in 5.105 seconds with exit status 0 (successful).
+  INFO [e98b1799] Running /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh ruby-3.1.4 bundle config --local path /home/deploy/apps/blog/shared/bundle on 15.228.43.171
+ DEBUG [e98b1799] Command: cd /home/deploy/apps/blog/releases/20230927155614 && /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh ruby-3.1.4 bundle config --local path /home/deploy/apps/blog/shared/bundle
+  INFO [e98b1799] Finished in 0.818 seconds with exit status 0 (successful).
+  INFO [50182c72] Running /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh ruby-3.1.4 bundle config --local without development:test on 15.228.43.171
+ DEBUG [50182c72] Command: cd /home/deploy/apps/blog/releases/20230927155614 && /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh ruby-3.1.4 bundle config --local without development:test
+  INFO [50182c72] Finished in 0.820 seconds with exit status 0 (successful).
+ DEBUG [b9248fa5] Running if test ! -d /home/deploy/apps/blog/releases/20230927155614; then echo "Directory does not exist '/home/deploy/apps/blog/releases/20230927155614'" 1>&2; false; fi on 15.228.43.171
+ DEBUG [b9248fa5] Command: if test ! -d /home/deploy/apps/blog/releases/20230927155614; then echo "Directory does not exist '/home/deploy/apps/blog/releases/20230927155614'" 1>&2; false; fi
+ DEBUG [b9248fa5] Finished in 0.040 seconds with exit status 0 (successful).
+ DEBUG [d76117a7] Running /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh ruby-3.1.4 bundle check on 15.228.43.171
+ DEBUG [d76117a7] Command: cd /home/deploy/apps/blog/releases/20230927155614 && /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh ruby-3.1.4 bundle check
+ DEBUG [d76117a7] 	[31mThe following gems are missing[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * jekyll (4.3.2)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * jekyll-agency (1.0.9)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * jekyll-remote-theme (0.4.3)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * minima (2.5.1)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * jekyll-feed (0.17.0)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * mysql2 (0.5.5)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * puma (6.4.0)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * rake (13.0.6)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * addressable (2.8.5)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * colorator (1.1.0)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * em-websocket (0.5.3)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * i18n (1.14.1)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * jekyll-sass-converter (3.0.0)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * jekyll-watch (2.2.1)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * kramdown (2.4.0)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * kramdown-parser-gfm (1.1.0)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * liquid (4.0.4)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * mercenary (0.4.0)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * pathutil (0.16.2)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * rouge (4.1.3)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * safe_yaml (1.0.5)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * terminal-table (3.0.2)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * webrick (1.8.1)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * rubyzip (2.3.2)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * jekyll-seo-tag (2.8.0)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * nio4r (2.5.9)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * public_suffix (5.0.3)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * eventmachine (1.2.7)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * http_parser.rb (0.8.0)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * concurrent-ruby (1.2.2)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * sass-embedded (1.68.0)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * listen (3.8.0)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * rexml (3.2.6)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * forwardable-extended (2.6.0)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * unicode-display_width (2.4.2)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * google-protobuf (3.24.3)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * rb-fsevent (0.11.2)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * rb-inotify (0.10.1)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[31m * ffi (1.16.2)[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [d76117a7] 	
+ DEBUG [d76117a7] Finished in 1.010 seconds with exit status 1 (failed).
+  INFO [070b0303] Running /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh ruby-3.1.4 bundle install --jobs 1 --quiet on 15.228.43.171
+ DEBUG [070b0303] Command: cd /home/deploy/apps/blog/releases/20230927155614 && /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh ruby-3.1.4 bundle install --jobs 1 --quiet
+  INFO [070b0303] Finished in 77.217 seconds with exit status 0 (successful).
+ DEBUG [2fdc52f8] Running if test ! -d /home/deploy/apps/blog/releases/20230927155614; then echo "Directory does not exist '/home/deploy/apps/blog/releases/20230927155614'" 1>&2; false; fi on 15.228.43.171
+ DEBUG [2fdc52f8] Command: if test ! -d /home/deploy/apps/blog/releases/20230927155614; then echo "Directory does not exist '/home/deploy/apps/blog/releases/20230927155614'" 1>&2; false; fi
+ DEBUG [2fdc52f8] Finished in 0.082 seconds with exit status 0 (successful).
+  INFO [b09bbe06] Running /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh ruby-3.1.4 bundle exec rake assets:precompile on 15.228.43.171
+ DEBUG [b09bbe06] Command: cd /home/deploy/apps/blog/releases/20230927155614 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; /home/deploy/apps/blog/rvm1scripts/rvm-auto.sh ruby-3.1.4 bundle exec rake assets:precompile )
+ DEBUG [b09bbe06] 	rake aborted!
+ DEBUG [b09bbe06] 	
+ DEBUG [b09bbe06] 	No Rakefile found (looking for: rakefile, Rakefile, rakefile.rb, Rakefile.rb)
+ DEBUG [b09bbe06] 	
+ DEBUG [b09bbe06] 	/home/deploy/apps/blog/shared/bundle/ruby/3.1.0/gems/rake-13.0.6/exe/rake:27:in `<top (required)>'
+ DEBUG [b09bbe06] 	
+ DEBUG [b09bbe06] 	/home/deploy/.rvm/gems/ruby-3.1.4/bin/ruby_executable_hooks:22:in `eval'
+ DEBUG [b09bbe06] 	
+ DEBUG [b09bbe06] 	/home/deploy/.rvm/gems/ruby-3.1.4/bin/ruby_executable_hooks:22:in `<main>'
+ DEBUG [b09bbe06] 	
+ DEBUG [b09bbe06] 	(See full trace by running task with --trace)
+ DEBUG [b09bbe06] 	
